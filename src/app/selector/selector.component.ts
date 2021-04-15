@@ -6,14 +6,15 @@ import { DateService } from '../shared/date.service';
   templateUrl: './selector.component.html',
   styleUrls: ['./selector.component.scss']
 })
-export class SelectorComponent  {
+export class SelectorComponent {
 
   constructor(
-    private dateService: DateService
-  ) { 
-    
+    public dateService: DateService
+  ) { }
+
+  go(dir: number) {
+    this.dateService.changeMonth(dir)
   }
 
-  
 
 }
